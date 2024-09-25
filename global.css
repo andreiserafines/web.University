@@ -1,0 +1,82 @@
+:root {
+    --input-padding: 1em;
+    --input-margin: 0.5em 0;
+    --input-border-radius: 0.5em;
+    --input-bg-color: rgba(255, 255, 255, 0.25);
+    --input-focus-color: rgba(255, 255, 255, 0.35); /* Slightly different for focus */
+    --input-border: 1px solid rgba(0, 0, 0, 0.1);
+    --primary-color: #fff;
+    --secondary-color: rgb(243, 158, 0);
+    --tertiary-color: #777;
+    --quaternary--color: #fff3f3;
+}
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 1em auto;
+}
+
+
+section h1 {
+    font-size: 2.25em;
+    font-weight: 37.5em;
+}
+
+section p {
+    color: var(--tertiary-color);
+    font-size: 1em;
+    font-weight: 18.75rem;
+    line-height: 1.375rem;
+    padding: 1em;
+
+}
+
+.row {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Inputs */
+input[type="text"], textarea {
+    color: var(--primary-color);
+    font-size: .9375rem;
+    padding: var(--input-padding);
+    margin: var(--input-margin);
+    border-radius: var(--input-border-radius);
+    background-color: var(--input-bg-color);
+    border: var(--input-border);
+    outline: none;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Focus State for Better Accessibility */
+input[type="text"]:focus, textarea:focus {
+    background-color: var(--input-focus-color);
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Slightly darker border on focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Optional focus ring */
+}
+
+/* Add a Smooth Transition for Better UX */
+input[type="text"], textarea {
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-col button {
+    border-radius: .5em;
+    padding: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 95%;
+    }
+}

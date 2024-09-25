@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* colors */
+:root {
+    --primary-color: #fff;
+    --secondary-color: rgb(243, 158, 0);
+    --tertiary-color: #777;
+    --quaternary--color: #fff3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+}
+
+
+/* Header */
+header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)),
+        url('../img/university-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    position: fixed;
+    width: 1240px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+    position: -webkit-sticky !important;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+nav.scrolled {
+    background-color: rgba(27, 27, 27, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: var(--secondary-color);
+}
+
+nav .logo a h1 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    background: var(--secondary-color);
+    height: 2px;
+    margin: 2px auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    text-transform: capitalize;
+}
+
+.nav-icons {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* Hero Section */
+.text-box {
+    width: 80%;
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 3.2185em;
+}
+
+.text-box p {
+    font-size: 1.1em;
+    margin: .625em 0 2.5em;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.75em 2.125em;
+    font-size: 1em;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid;
+    text-transform: capitalize;
+}
+
+.hero-btn:hover {
+    border: 1px solid var(--primary-color);
+    background: var(--secondary-color);
+    transition: 1s;
+}
+
+
+/* Course Section */
+.course {
+    margin: auto;
+    text-align: center;
+    padding-top: 6.25em;
+
+}
+
+.course-col {
+    margin-top: 1%;
+    flex-basis: 31%;
+    background: var(--quaternary--color);
+    border-radius: .625rem;
+    padding: .75rem;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Campus Section */
+.g-campus {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3.25rem;
+    padding-bottom: 3em;
+    background-color: #fff3f3;
+}
+
+.g-campus-col {
+    flex-basis: 31%;
+    margin-top: 1%;
+    position: relative;
+    border-radius: .5em;
+    overflow: hidden;
+    height: 400px;
+
+}
+
+.g-campus-col img {
+    width: 100%;
+    display: block;
+    border-radius: .5em;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(245, 160, 2, 0.712);
+}
+
+.layer h3 {
+    width: 100%;
+    margin-top: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1.625rem;
+    transition: 0.5s;
+}
+
+
+/* Facilities Section */
+.facilities {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3.25rem;
+    background-color: #fff3f3;
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    border-radius: .625rem;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img {
+    width: 100%;
+    border-radius: .625rem;
+}
+
+.facilities-col p {
+    padding: 0;
+}
+
+.facilities-col h3 {
+    margin-top: 1rem;
+    margin-bottom: .9375rem;
+    text-align: left;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 6.25rem;
+}
+
+.testimonials-col {
+    flex-basis: 47%;
+    border-radius: .625rem;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: #fff3f3;
+    padding: 1.5625rem;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonials-col img {
+    height: 70px;
+    width: 190px;
+    margin-left: .3125rem;
+    margin-right: 1.875rem;
+    border-radius: 50%;
+}
+
+.testimonials p {
+    padding: 0;
+}
+
+.testimonials-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.fa-star,
+.fa-star-half-o {
+    color: #f44366;
+}
+
+
+/* CTA */
+.action {
+    margin: 6.25rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action .container {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6),
+            rgba(4, 9, 30, 0.6)),
+        url('../img/bg-2.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 3em 1em;
+    color: var(--primary-color);
+    border-radius: .5em;
+    padding: 6.25rem;
+    text-align: center;
+    margin: 1em;
+}
+
+
+/* Footer */
+footer {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.9),
+            rgba(4, 9, 30, 0.9)),
+        url('../img/footer.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 3em 1em;
+    color: var(--primary-color);
+}
+
+footer h1, h2 {
+    color: var(--secondary-color);
+}
+
+footer p {
+    color: var(--quaternary--color);
+}
+
+footer .row {
+    margin: 2em auto;
+    justify-content: space-around;
+    max-width: 1240px;
+    gap: 5em;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+}
+
+.icon-link ion-icon{
+    margin-top: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--tertiary-color);
+    padding: .3em;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.sub-footer {
+    color: var(--quaternary--color);
+    background-color: #141414;
+    padding: 1em;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        position: relative;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: -.65rem;   
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        transition: .3s ease;
+        position: absolute;
+        top: 0;
+        background-color: var(--secondary-color);
+        padding: 1em 0;
+        width: 200px;
+        right: -200px;
+        height: 100%;
+        z-index: 1000;
+        box-shadow: 0 0 5px px black;
+    }
+
+    .menu-toggle ul {
+        flex-direction: column;
+        padding: 1em 0;
+        list-style: none;
+    }
+
+    .menu-toggle ul li {
+        padding: 1em;
+    }
+
+    .menu-toggle ul li a {
+        color: var(--primary-color);
+    }
+
+    .menu-toggle .nav-icons {
+        margin-left: 5px;
+    }
+
+    .nav-icons {
+        display: block;
+        font-size: 1.875rem;
+        color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .text-box h1 {
+        font-size: 2.3em;
+    }
+
+    /* Course */
+    .course .row {
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    /* Campus */
+    .g-campus .row {
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    /* Facilities */
+    .facilities .row {
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    /* Testimonials */
+    .testimonials .row {
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    .testimonials-col img {
+        width: 500px;
+    }
+
+    /* Action */
+    .action .container{
+        padding: 2em;
+    }
+
+    /* Footer */
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
